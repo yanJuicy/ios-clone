@@ -50,6 +50,9 @@ class RegisterViewController: UIViewController {
         
         signupButton.layer.cornerRadius = 5
         setupAttributes()
+        
+        // 뒤로 가기 스와이프
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     @objc
@@ -73,6 +76,12 @@ class RegisterViewController: UIViewController {
             fatalError("Missing TextField.")
         }
     }
+    
+    @IBAction func backButtonDidTap(_ sender: UIBarButtonItem) {
+        // 뒤로 가기
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     private func setupTextField() {
         textFields.forEach { tf in

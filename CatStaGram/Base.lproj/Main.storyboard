@@ -147,6 +147,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0tI-Rc-VJ8"/>
                     <connections>
+                        <outlet property="loginButton" destination="N8b-2z-hPR" id="BDI-mN-cQt"/>
                         <outlet property="registerButton" destination="Hd5-ob-B5z" id="nUo-Qg-Wdu"/>
                     </connections>
                 </viewController>
@@ -244,6 +245,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButtonDidTap:" destination="cKj-PT-PDq" eventType="touchUpInside" id="3Tq-Kl-u5H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDZ-ed-aIm">
                                 <rect key="frame" x="115.66666666666667" y="763.33333333333337" width="161.66666666666663" height="29.666666666666629"/>
@@ -338,6 +342,21 @@
             </objects>
             <point key="canvasLocation" x="160" y="-29"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="QjV-Pw-c4F">
+            <objects>
+                <viewController storyboardIdentifier="TestVC" id="QZV-UY-fxK" customClass="TestViewController" customModule="CatStaGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iZ3-VW-cuS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="p4I-QK-UHq"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Zt-Rr-spd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="652"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
@@ -351,6 +370,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

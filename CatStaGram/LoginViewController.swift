@@ -11,8 +11,10 @@ class LoginViewController: UIViewController {
     
     var email = String()
     var password = String()
+    var userInfo : UserInfo?
     
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +24,24 @@ class LoginViewController: UIViewController {
     @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.email = text
+        self.loginButton.backgroundColor = text.isValidEmail() ? .facebookColor : .disabledButtonColor
     }
     
     @IBAction func passwordTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.password = text
+        self.loginButton.backgroundColor = text.count > 2 ? .facebookColor : .disabledButtonColor
     }
     
     @IBAction func loginButtonDidTap(_ sender: UIButton) {
+        // 회원가입정보를 전달받아서, 그것과 textField 데이터가 일치하면 로그인이 되어야 한다.
+        guard let userInfo = self.userInfo else { return }
+        
+        if userInfo.email == self.email && userInfo.password == self.password {
+            let testVC = storyboard?.instantiateViewController(withIdentifier: "TestVC") as! TestViewController
+            self.present(testVC, animated: true, completion: nil)
+        } else {
+        }
         
     }
     
@@ -43,6 +55,11 @@ class LoginViewController: UIViewController {
         let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterViewController
 //        self.present(registerViewController, animated: true)
         self.navigationController?.pushViewController(registerViewController, animated: true)
+        
+        // ARC -> 강한참조 / 약한참조 -> ARC 낮춰줌
+        registerViewController.userInfo = { [weak self] (userInfo: UserInfo) in
+            self?.userInfo = userInfo
+        }
     }
     
     private func setupAttributes() {

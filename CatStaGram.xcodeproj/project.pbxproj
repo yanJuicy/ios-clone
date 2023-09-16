@@ -17,6 +17,8 @@
 		E98A91992AA9EF9B006CE97F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A91982AA9EF9B006CE97F /* Color+Extension.swift */; };
 		E98A919B2AA9F02D006CE97F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A919A2AA9F02D006CE97F /* LoginViewController.swift */; };
 		E98A919D2AAAE608006CE97F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A919C2AAAE608006CE97F /* RegisterViewController.swift */; };
+		E9A6B62E2AB61297001DBD03 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6B62D2AB61297001DBD03 /* UserInfo.swift */; };
+		E9A6B6302AB6180A001DBD03 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6B62F2AB6180A001DBD03 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E98A91982AA9EF9B006CE97F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		E98A919A2AA9F02D006CE97F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E98A919C2AAAE608006CE97F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E9A6B62D2AB61297001DBD03 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		E9A6B62F2AB6180A001DBD03 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				E98A919C2AAAE608006CE97F /* RegisterViewController.swift */,
 				E981EB872AB0672500183384 /* UIView+Extension.swift */,
 				E981EB892AB06AFE00183384 /* UIViewController+Extension.swift */,
+				E9A6B62D2AB61297001DBD03 /* UserInfo.swift */,
+				E9A6B62F2AB6180A001DBD03 /* TestViewController.swift */,
 			);
 			path = CatStaGram;
 			sourceTree = "<group>";
@@ -154,8 +160,10 @@
 				E98A91852AA91E28006CE97F /* AppDelegate.swift in Sources */,
 				E98A919D2AAAE608006CE97F /* RegisterViewController.swift in Sources */,
 				E98A91872AA91E28006CE97F /* SceneDelegate.swift in Sources */,
+				E9A6B62E2AB61297001DBD03 /* UserInfo.swift in Sources */,
 				E981EB8A2AB06AFE00183384 /* UIViewController+Extension.swift in Sources */,
 				E98A919B2AA9F02D006CE97F /* LoginViewController.swift in Sources */,
+				E9A6B6302AB6180A001DBD03 /* TestViewController.swift in Sources */,
 				E98A91992AA9EF9B006CE97F /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

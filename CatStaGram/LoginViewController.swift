@@ -38,8 +38,9 @@ class LoginViewController: UIViewController {
         guard let userInfo = self.userInfo else { return }
         
         if userInfo.email == self.email && userInfo.password == self.password {
-            let testVC = storyboard?.instantiateViewController(withIdentifier: "TestVC") as! TestViewController
-            self.present(testVC, animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         } else {
         }
         
